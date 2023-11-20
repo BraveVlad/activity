@@ -1,6 +1,8 @@
+import { attachLoggerFormEvents } from "./activities.connector.js";
 import { createActivity, generateActivityId, getCurrentTime } from "./activities.model.js";
 function main() {
     console.log("Welcome to Tracker. app!");
+    attachLoggerFormEvents();
     createActivity({
         id: generateActivityId(),
         name: "Practice Javascript",

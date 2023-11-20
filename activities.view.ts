@@ -11,6 +11,8 @@ export function showList(activities: Activity[]) {
     });
 }
 
+
+
 function generateActivityView(activity: Activity): HTMLElement {
 
     const activityItem = document.createElement("li") as HTMLLIElement;

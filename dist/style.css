@@ -30,7 +30,8 @@ a:active {
 
 :root {
   --color-main: rgb(95, 182, 204);
-  --color-second: lightblue;
+  --color-secondary: #add8e6;
+  --color-grey: rgba(168, 168, 168, 0.75);
   --font-size-big: 1.5rem;
   --font-size-regular: 1rem;
   --font-size-small: 0.75rem;
@@ -66,6 +67,61 @@ body {
 .screen {
   flex: 18;
   padding-inline: 1rem;
+  position: relative;
+}
+
+.floating-action {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.floating-action__button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 32px;
+  font-size: var(--font-size-big);
+}
+
+.log-activity-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.log-activity-dialog--hidden {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  font-weight: var(--font-weight-bold);
+}
+.form__title {
+  font-size: var(--font-size-big);
+  margin: 0 auto 1rem auto;
+}
+.form__input {
+  margin-bottom: 1rem;
+}
+.form__options {
+  display: flex;
+  gap: 1rem;
+}
+.form__button {
+  width: 50%;
+  height: 2rem;
+  margin-inline: auto;
 }
 
 .activities {
@@ -79,7 +135,7 @@ body {
 }
 
 .activity {
-  background-color: var(--color-second);
+  background-color: var(--color-secondary);
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;

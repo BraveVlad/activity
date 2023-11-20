@@ -36,6 +36,27 @@
             </li>
         </ul>
 
+        <div class="floating-action">
+            <button class="floating-action__button">+</button>
+        </div>
+
+        <div class="log-activity-dialog log-activity-dialog--hidden">
+            <form name="log-activity-form" class="form">
+                <h3 class="form__title">New Activity</h3>
+                <label for="log-activity-name" class="form__label">Name:</label>
+                <input type="text" name="log-activity-name" id="log-activity-name" class="form__input">
+                <label for="log-activity-time-start" class="form__label">Start time:</label>
+                <input type="datetime-local" name="log-activity-time-start" id="log-activity-time-start"
+                    class="form__input">
+                <label for="log-activity-time-end" class="form__label">End time:</label>
+                <input type="datetime-local" name="log-activity-time-end" id="log-activity-time-end"
+                    class="form__input">
+                <div class="form__options">
+                    <button class="log-activity-form__submit form__button">Submit</button>
+                    <button class="log-activity-form__cancel form__button">Cancel</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <nav class="navbar">
