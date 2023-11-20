@@ -23,7 +23,7 @@ Activity Tracker App
         [] goal time
         [] status 
 
-- [] method to add/remove/edit activity 
+- [/] method to add/remove/edit activity 
 - [] COMPONENT - list of activities and their data by date
     - [] button to add activity 
     - [] button to remove activity 
