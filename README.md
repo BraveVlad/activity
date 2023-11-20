@@ -12,7 +12,7 @@ Activity Tracker App
 
 ## TODO 
 
-- [] setup initial files (connect style+ts)
+- [x] setup initial files (connect style+ts)
 - [] create activity object
         [] id
         [] name

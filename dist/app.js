@@ -1,1 +1,0 @@
-alert("Activity tracker app");

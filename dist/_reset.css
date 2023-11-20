@@ -12,4 +12,18 @@ body {
   height: 100%;
   font-size: 16px;
   font-family: "Inter", Arial, sans-serif;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }

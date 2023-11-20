@@ -4,13 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Tracker App</title>
+    <title>Tracker - Track everything</title>
 
     <link rel="stylesheet" href="dist/style.css">
 </head>
 
 <body>
-    <h1>Activity Tracker App</h1>
+    <h1 class="main-logo"><a href="/">Tracker.</a></h1>
+
+    <main class="screen">
+        main screen content
+    </main>
+
+    <nav class="navbar">
+        <li class="navbar__item">
+            <a href="/" class="navbar__tab">
+                <div class="navbar__icon">📋</div>
+                <p class="navbar__title">Activities</p>
+            </a>
+        </li>
+        <li class="navbar__item">
+            <a href="/" class="navbar__tab">
+                <div class="navbar__icon">⌛</div>
+                <p class="navbar__title">Tracker</p>
+            </a>
+        </li>
+        <li class="navbar__item">
+            <a href="/" class="navbar__tab">
+                <div class="navbar__icon">📊</div>
+                <p class="navbar__title">Statistics</p>
+            </a>
+        </li>
+    </nav>
 
     <script type="module" src="dist/app.js"></script>
 </body>
