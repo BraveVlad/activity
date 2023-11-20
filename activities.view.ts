@@ -35,7 +35,7 @@ function generateActivityView(activity: Activity): HTMLElement {
     const timeTitleStart = document.createElement("span") as HTMLSpanElement;
     timeTitleStart.innerText = "Start: "
     activityTimeStart.append(timeTitleStart);
-    activityTimeStart.innerText += new Date(activity.timeStart).toLocaleDateString();
+    activityTimeStart.innerText += new Date(activity.timeStart).toLocaleString();
 
     const activityTimeEnd = document.createElement("p") as HTMLParagraphElement;
     activityTimeEnd.classList.add("activity__time");
@@ -44,7 +44,7 @@ function generateActivityView(activity: Activity): HTMLElement {
     timeTitleEnd.innerText = "End: "
     activityTimeEnd.append(timeTitleEnd);
 
-    activityTimeEnd.innerText += activity.timeEnd ? activity.timeEnd.toLocaleString() : "N/A";
+    activityTimeEnd.innerText += new Date(activity.timeEnd).toLocaleString();
 
     activityTimes.append(activityTimeStart)
     activityTimes.append(activityTimeEnd)

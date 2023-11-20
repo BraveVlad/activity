@@ -25,15 +25,7 @@
                     </div>
                 </div>
             </li>
-            <li class="activities__item">
-                <div class="activity">
-                    <h3 class="activity__name">name</h3>
-                    <div class="activity__times">
-                        <p class="activity__time activity__time--start"><span>Start: </span>time start</p>
-                        <p class="activity__time activity__time--end"><span>End: </span>time end</p>
-                    </div>
-                </div>
-            </li>
+
         </ul>
 
         <div class="floating-action">
@@ -44,12 +36,14 @@
             <form name="log-activity-form" class="form">
                 <h3 class="form__title">New Activity</h3>
                 <label for="log-activity-name" class="form__label">Name:</label>
-                <input type="text" name="log-activity-name" id="log-activity-name" class="form__input">
+                <input required type="text" name="log-activity-name" id="log-activity-name" class="form__input">
+                <label for="log-activity-comment" class="form__label">Comment:</label>
+                <input type="text" name="log-activity-comment" id="log-activity-comment" class="form__input">
                 <label for="log-activity-time-start" class="form__label">Start time:</label>
-                <input type="datetime-local" name="log-activity-time-start" id="log-activity-time-start"
+                <input required type="datetime-local" name="log-activity-time-start" id="log-activity-time-start"
                     class="form__input">
                 <label for="log-activity-time-end" class="form__label">End time:</label>
-                <input type="datetime-local" name="log-activity-time-end" id="log-activity-time-end"
+                <input required type="datetime-local" name="log-activity-time-end" id="log-activity-time-end"
                     class="form__input">
                 <div class="form__options">
                     <button class="log-activity-form__submit form__button">Submit</button>

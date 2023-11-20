@@ -21,14 +21,14 @@ function generateActivityView(activity) {
     const timeTitleStart = document.createElement("span");
     timeTitleStart.innerText = "Start: ";
     activityTimeStart.append(timeTitleStart);
-    activityTimeStart.innerText += new Date(activity.timeStart).toLocaleDateString();
+    activityTimeStart.innerText += new Date(activity.timeStart).toLocaleString();
     const activityTimeEnd = document.createElement("p");
     activityTimeEnd.classList.add("activity__time");
     activityTimeEnd.classList.add("activity__time--end");
     const timeTitleEnd = document.createElement("span");
     timeTitleEnd.innerText = "End: ";
     activityTimeEnd.append(timeTitleEnd);
-    activityTimeEnd.innerText += activity.timeEnd ? activity.timeEnd.toLocaleString() : "N/A";
+    activityTimeEnd.innerText += new Date(activity.timeEnd).toLocaleString();
     activityTimes.append(activityTimeStart);
     activityTimes.append(activityTimeEnd);
     activityView.append(activityName);

@@ -14,17 +14,20 @@ export type Activity = {
 
 const activities = [] as Activity[];
 
-export function createActivity(activity: Omit<Activity, "timeEnd" | "duration" | "status">) {
+export function createActivity(activity: Omit<Activity, "duration" | "status">) {
     const newActivity: Activity = {
         ...activity,
-        timeEnd: 0,
-        duration: 0,
-        status: "initial"
+        duration: calculateDuration(activity.timeStart, activity.timeEnd),
+        status: "done"
     };
 
     activities.push(newActivity);
 
     showList(getActivities())
+}
+
+function calculateDuration(timeStart: number, timeEnd: number) {
+    return timeEnd - timeStart;
 }
 
 export function removeActivity(activityId: string) {
@@ -47,6 +50,10 @@ export function getCurrentTime() {
     return Date.now();
 }
 
-function getActivityIndexById(activityId: string): number {
+export function getActivityIndexById(activityId: string): number {
     return activities.findIndex((activity) => activity.id === activityId);
+}
+
+export function convertStringToDate(date: string): number {
+    return new Date(date).getTime();
 }

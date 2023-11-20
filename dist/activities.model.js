@@ -3,12 +3,14 @@ const activities = [];
 export function createActivity(activity) {
     const newActivity = {
         ...activity,
-        timeEnd: 0,
-        duration: 0,
-        status: "initial"
+        duration: calculateDuration(activity.timeStart, activity.timeEnd),
+        status: "done"
     };
     activities.push(newActivity);
     showList(getActivities());
+}
+function calculateDuration(timeStart, timeEnd) {
+    return timeEnd - timeStart;
 }
 export function removeActivity(activityId) {
     const activityIndex = getActivityIndexById(activityId);
@@ -25,6 +27,9 @@ export function generateActivityId() {
 export function getCurrentTime() {
     return Date.now();
 }
-function getActivityIndexById(activityId) {
+export function getActivityIndexById(activityId) {
     return activities.findIndex((activity) => activity.id === activityId);
+}
+export function convertStringToDate(date) {
+    return new Date(date).getTime();
 }
