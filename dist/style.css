@@ -28,6 +28,17 @@ a:active {
   color: inherit;
 }
 
+:root {
+  --color-main: rgb(95, 182, 204);
+  --color-second: lightblue;
+  --font-size-big: 1.5rem;
+  --font-size-regular: 1rem;
+  --font-size-small: 0.75rem;
+  --font-weight-bold: 900;
+  --font-weight-regular: 500;
+  --font-weight-light: 300;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -39,20 +50,52 @@ body {
   padding: 0.5rem;
 }
 
-.screen {
-  flex: 18;
-  background-color: green;
-}
-
 .navbar {
   flex: 2;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: pink;
+  background-color: var(--color-main);
 }
 .navbar__tab {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.screen {
+  flex: 18;
+  padding-inline: 1rem;
+}
+
+.activities {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.activities__item {
+  padding: 0.25rem;
+}
+
+.activity {
+  background-color: var(--color-second);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  word-break: break-all;
+  padding: 0.5rem;
+}
+.activity__name {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
+}
+.activity__comment {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+}
+.activity__times {
+  margin-left: auto;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
 }
