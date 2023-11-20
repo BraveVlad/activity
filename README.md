@@ -13,12 +13,12 @@ Activity Tracker App
 ## TODO 
 
 - [x] setup initial files (connect style+ts)
-- [] create activity object
-        [] id
-        [] name
-        [] time start
-        [] time end 
-        [] comment
+- [/] create activity object
+        [x] id
+        [x] name
+        [x] time start
+        [x] time end 
+        [x] comment
         optional
         [] goal time
         [] status 
