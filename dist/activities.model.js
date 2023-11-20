@@ -1,3 +1,4 @@
+import { showList } from "./activities.view.js";
 const activities = [];
 export function createActivity(activity) {
     const newActivity = {
@@ -7,6 +8,7 @@ export function createActivity(activity) {
         status: "initial"
     };
     activities.push(newActivity);
+    showList(getActivities());
 }
 export function removeActivity(activityId) {
     const activityIndex = getActivityIndexById(activityId);

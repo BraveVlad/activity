@@ -1,3 +1,4 @@
+import { showList } from "./activities.view.js";
 
 type ActivityStatus = "initial" | "tracked" | "done";
 
@@ -23,6 +24,8 @@ export function createActivity(activity: Omit<Activity, "timeEnd" | "duration" |
     };
 
     activities.push(newActivity);
+
+    showList(getActivities())
 }
 
 export function removeActivity(activityId: string) {
