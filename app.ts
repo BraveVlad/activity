@@ -6,18 +6,16 @@ function main() {
 
     createActivity({
         id: generateActivityId(),
-        name: "test",
+        name: "Practice Javascript",
         timeStart: getCurrentTime(),
-        comment: "comment A"
+        comment: "I should be focusing on time management"
     });
     createActivity({
         id: generateActivityId(),
-        name: "test to delete",
+        name: "Study Time Management\nTools",
         timeStart: getCurrentTime(),
-        comment: "comment B"
+        comment: "It could have been helpful for this project ♥"
     });
-
-    console.log(getActivities());
 
 }
 
