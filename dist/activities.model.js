@@ -2,7 +2,8 @@ const activities = [];
 export function createActivity(activity) {
     const newActivity = {
         ...activity,
-        timeEnd: "",
+        timeEnd: 0,
+        duration: 0,
         status: "initial"
     };
     activities.push(newActivity);
@@ -20,7 +21,7 @@ export function generateActivityId() {
     return performance.now().toString();
 }
 export function getCurrentTime() {
-    return Date.now().toString();
+    return Date.now();
 }
 function getActivityIndexById(activityId) {
     return activities.findIndex((activity) => activity.id === activityId);

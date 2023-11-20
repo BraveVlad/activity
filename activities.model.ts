@@ -4,8 +4,9 @@ type ActivityStatus = "initial" | "tracked" | "done";
 export type Activity = {
     id: string,
     name: string,
-    timeStart: string,
-    timeEnd: string,
+    timeStart: number,
+    timeEnd: number,
+    duration: number,
     status: ActivityStatus,
     comment: string
 }
@@ -13,10 +14,11 @@ export type Activity = {
 const activities = [] as Activity[];
 
 
-export function createActivity(activity: Omit<Activity, "timeEnd" | "status">) {
+export function createActivity(activity: Omit<Activity, "timeEnd" | "duration" | "status">) {
     const newActivity: Activity = {
         ...activity,
-        timeEnd: "",
+        timeEnd: 0,
+        duration: 0,
         status: "initial"
     };
 
@@ -40,7 +42,7 @@ export function generateActivityId() {
 }
 
 export function getCurrentTime() {
-    return Date.now().toString();
+    return Date.now();
 }
 
 function getActivityIndexById(activityId: string): number {
