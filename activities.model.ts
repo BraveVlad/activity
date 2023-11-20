@@ -14,7 +14,6 @@ export type Activity = {
 
 const activities = [] as Activity[];
 
-
 export function createActivity(activity: Omit<Activity, "timeEnd" | "duration" | "status">) {
     const newActivity: Activity = {
         ...activity,
