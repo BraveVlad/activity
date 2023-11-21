@@ -47,8 +47,9 @@ body {
 
 .floating-action {
 
-    position: absolute;
-    bottom: 1rem;
+    position: fixed;
+
+    bottom: 5rem;
     right: 1rem;
 
     &__button {
@@ -56,7 +57,17 @@ body {
         height: 4rem;
         border-radius: 32px;
         font-size: var(--font-size-big);
+        opacity: 0.5;
+        transition: opacity 0.25s;
+
+        background-color: var(--color-main);
+
+        &:hover {
+            opacity: 1;
+        }
     }
+
+
 }
 
 .logger-dialog {
@@ -78,7 +89,6 @@ body {
     &--hidden {
         display: none;
     }
-
 }
 
 .form {

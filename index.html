@@ -23,26 +23,25 @@
             <button class="floating-action__button">+</button>
         </div>
 
-        <div class="logger-dialog logger-dialog--hidden">
-            <form name="logger-form" class="form">
-                <h3 class="form__title">New Activity</h3>
-                <label for="logger-name" class="form__label">Name:</label>
-                <input required type="text" name="logger-name" id="logger-name" class="form__input">
-                <label for="logger-comment" class="form__label">Comment:</label>
-                <input type="text" name="logger-comment" id="logger-comment" class="form__input">
-                <label for="logger-time-start" class="form__label">Start time:</label>
-                <input required type="datetime-local" name="logger-time-start" id="logger-time-start"
-                    class="form__input">
-                <label for="logger-time-end" class="form__label">End time:</label>
-                <input required type="datetime-local" name="logger-time-end" id="logger-time-end" class="form__input">
-                <div class="form__options">
-                    <button class="logger-form__submit form__button">Submit</button>
-                    <button class="logger-form__cancel form__button">Cancel</button>
-                </div>
-            </form>
-        </div>
     </main>
 
+    <div class="logger-dialog logger-dialog--hidden">
+        <form name="logger-form" class="form">
+            <h3 class="form__title">New Activity</h3>
+            <label for="logger-name" class="form__label">Name:</label>
+            <input required type="text" name="logger-name" id="logger-name" class="form__input">
+            <label for="logger-comment" class="form__label">Comment:</label>
+            <input type="text" name="logger-comment" id="logger-comment" class="form__input">
+            <label for="logger-time-start" class="form__label">Start time:</label>
+            <input required type="datetime-local" name="logger-time-start" id="logger-time-start" class="form__input">
+            <label for="logger-time-end" class="form__label">End time:</label>
+            <input required type="datetime-local" name="logger-time-end" id="logger-time-end" class="form__input">
+            <div class="form__options">
+                <button class="logger-form__submit form__button">Submit</button>
+                <button class="logger-form__cancel form__button">Cancel</button>
+            </div>
+        </form>
+    </div>
     <nav class="navbar">
         <li class="navbar__item">
             <a href="/activity/" class="navbar__tab">
