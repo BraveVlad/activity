@@ -11,6 +11,7 @@
     --font-weight-regular: 500;
     --font-weight-light: 300;
 
+    --navbar-height: 4rem;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 .navbar {
-    flex: 2;
+    flex-basis: var(--navbar-height);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -49,7 +50,7 @@ body {
 
     position: fixed;
 
-    bottom: 5rem;
+    bottom: calc(var(--navbar-height) + 1rem);
     right: 1rem;
 
     &__button {
@@ -66,7 +67,6 @@ body {
             opacity: 1;
         }
     }
-
 
 }
 
@@ -110,7 +110,6 @@ body {
         margin-bottom: 1rem;
 
     }
-
 
     &__options {
         display: flex;
