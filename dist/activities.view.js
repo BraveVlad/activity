@@ -5,7 +5,7 @@ export const loggerForm = document.forms.namedItem("logger-form");
 export const loggerStartDate = loggerForm.querySelector("#logger-time-start");
 export const loggerEndDate = loggerForm.querySelector("#logger-time-end");
 export const cancelButton = loggerForm.querySelector(".logger-form__cancel");
-export function showList(activities) {
+export function drawActivitiesList(activities) {
     const activitiesListView = document.querySelector(".activities");
     activitiesListView.replaceChildren();
     activities.forEach(activity => {

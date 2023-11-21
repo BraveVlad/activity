@@ -1,4 +1,6 @@
-import { showList } from "./activities.view.js";
+import { drawActivitiesList } from "./activities.view.js";
+
+const ACTIVITIES_STORAGE_KEY = "activities-list";
 
 type ActivityStatus = "initial" | "tracked" | "done";
 
@@ -23,7 +25,8 @@ export function createActivity(activity: Omit<Activity, "duration" | "status">) 
 
     activities.push(newActivity);
 
-    showList(getActivities())
+    saveStoredActivities(getActivities());
+    drawActivitiesList(getActivities());
 }
 
 function calculateDuration(timeStart: number, timeEnd: number) {
@@ -40,6 +43,15 @@ export function removeActivity(activityId: string) {
 
 export function getActivities() {
     return activities.slice();
+}
+
+function setActivities(newActivities: Activity[]) {
+    emptyActivities();
+    newActivities.forEach((activity) => activities.push(activity))
+}
+
+function emptyActivities() {
+    activities.splice(0);
 }
 
 export function generateActivityId() {
@@ -59,4 +71,33 @@ export function getActivityIndexById(activityId: string): number {
 
 export function convertStringToDate(date: string): number {
     return new Date(date).getTime();
+}
+
+function saveStoredActivities(activities: Activity[]) {
+    clearStoredActivities();
+    const serializedActivities = JSON.stringify(activities);
+    localStorage.setItem(ACTIVITIES_STORAGE_KEY, serializedActivities);
+}
+
+function clearStoredActivities() {
+    localStorage.setItem(ACTIVITIES_STORAGE_KEY, "");
+}
+
+function getStoredActivities(): Activity[] {
+    const rawActivities = localStorage.getItem(ACTIVITIES_STORAGE_KEY);
+
+    if (!rawActivities) throw Error("No stored activities!");
+
+    const deserializedActivities = JSON.parse(rawActivities);
+
+    return deserializedActivities;
+}
+
+export function loadActivities() {
+    try {
+        setActivities(getStoredActivities());
+        drawActivitiesList(getActivities());
+    } catch {
+        emptyActivities();
+    }
 }

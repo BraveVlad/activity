@@ -8,8 +8,7 @@ export const loggerStartDate = loggerForm.querySelector("#logger-time-start") as
 export const loggerEndDate = loggerForm.querySelector("#logger-time-end") as HTMLInputElement;
 export const cancelButton = loggerForm.querySelector(".logger-form__cancel") as HTMLButtonElement;
 
-export function showList(activities: Activity[]) {
-
+export function drawActivitiesList(activities: Activity[]) {
     const activitiesListView = document.querySelector(".activities") as HTMLUListElement;
 
     activitiesListView.replaceChildren();
