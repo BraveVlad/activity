@@ -82,7 +82,7 @@ body {
   font-size: var(--font-size-big);
 }
 
-.log-activity-dialog {
+.logger-dialog {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,7 +96,7 @@ body {
   align-items: center;
   padding: 2rem;
 }
-.log-activity-dialog--hidden {
+.logger-dialog--hidden {
   display: none;
 }
 

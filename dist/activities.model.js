@@ -27,6 +27,9 @@ export function generateActivityId() {
 export function getCurrentTime() {
     return Date.now();
 }
+export function convertTimeToString(time) {
+    return new Date(time).toLocaleString();
+}
 export function getActivityIndexById(activityId) {
     return activities.findIndex((activity) => activity.id === activityId);
 }

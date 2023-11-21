@@ -50,6 +50,9 @@ export function getCurrentTime() {
     return Date.now();
 }
 
+export function convertTimeToString(time: number) {
+    return new Date(time).toLocaleString();
+}
 export function getActivityIndexById(activityId: string): number {
     return activities.findIndex((activity) => activity.id === activityId);
 }
